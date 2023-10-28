@@ -5,6 +5,8 @@ const port = 9000
 const task = require('./routes/task')
 
 // app.use(express.json())
+app.use('/api/v1/task', task);
+app.use(express.json());
 
 //route
 
@@ -17,7 +19,8 @@ app.get('/hello', (req,res) => {
 })
 
 
-app.use('/api/v1/task', task);
+
+
 
 //app.get('/api/v1/tasks')             -Gett all task
 //app.post('/api/v1/tasks')            -Create a new task

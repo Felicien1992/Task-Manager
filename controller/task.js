@@ -3,7 +3,8 @@ const getAllTask = (req, res) => {
 };
 
 const createTask = (req, res) => {
-    res.send('createTask');
+    res.json(req.body);
+    // res.send('createTask');
 };
 
 const getTask = (req, res) => {
@@ -11,11 +12,13 @@ const getTask = (req, res) => {
 };
 
 const updateTask = (req, res) => {
-    res.send('update Task');
+    res.json({ id: req.params.id });
+    // res.send('update Task');
 };
 
 const deleteTask = (req, res) => {
-    res.send('deleteTask');
+    // res.send('deleteTask');
+    res.json({ id: req.params.id });
 };
 
 
