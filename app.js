@@ -5,8 +5,9 @@ const port = 9000
 const task = require('./routes/task')
 
 // app.use(express.json())
-app.use('/api/v1/task', task);
 app.use(express.json());
+app.use('/api/v1/task', task);
+
 
 //route
 
@@ -14,7 +15,7 @@ app.get('/', (req, res) => {
     res.send('Welcom to our Website');
 })
 
-app.get('/hello', (req,res) => {
+app.get('/hello', (req, res) => {
     res.send('Task Manage App');
 })
 
