@@ -6,7 +6,9 @@ const TaskSchema = new mongoose.Schema({
         trim:true,
         maxlength:[20,'name can not more than 20 character']
     },
-    completed:Boolean
+    completed:Boolean,
+    phoneNumber: Number,
+    address: String
 })
 
 module.exports = mongoose.model('Task',TaskSchema)
