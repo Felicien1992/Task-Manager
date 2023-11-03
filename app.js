@@ -8,8 +8,10 @@ require('dotenv').config() //npm install dotenv =>uko
 
 // app.use(express.json())
 app.use(express.json());
-app.use('/api/v1/task', task);
+app.use(express.static('./public'))
 
+
+app.use('/api/v1/tasks', task);
 
 //route
 
