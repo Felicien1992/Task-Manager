@@ -6,7 +6,10 @@ const TaskSchema = new mongoose.Schema({
         trim:true,
         maxlength:[20,'name can not more than 20 character']
     },
-    completed:Boolean,
+    completed:{
+        type:Boolean,
+        default:false
+    },
     phoneNumber: Number,
     address: String
 })

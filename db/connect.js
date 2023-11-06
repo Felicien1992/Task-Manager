@@ -9,7 +9,7 @@ const connectDb = ( url) => {
         useFindAndModify: false ,
         useUnifiedTopology: true
     })
-    // .then(() => console.log('connected to the Data Base..')).catch((err)=> console.log('err'))
-}
+//      .then(() => console.log('Connected to the Data Base..')).catch((err)=> console.log('err'))
+ }
 
 module.exports = connectDb
