@@ -1,10 +1,10 @@
 require('./db/connect')
 const express = require('express');
 const app = express()
-const port = 9000
+// const port = 3000
 const tasks = require('./routes/tasks')
-const connectDB = require('./db/connect')
-require('dotenv').config() //npm install dotenv =>uko 
+const connectDb = require('./db/connect')
+require('dotenv').config()
 
 // app.use(express.json())
 app.use(express.json());
@@ -13,8 +13,8 @@ app.use(express.static('./public'))
 
 app.use('/api/v1/tasks', tasks);
 
-//route
 
+const port = process.env.PORT || 7000
 app.get('/', (req, res) => {
     res.send('Welcom to our Website');
 })
@@ -24,27 +24,27 @@ app.get('/hello', (req, res) => {
 })
 const start = async () => {
     try {
-        await connectDB(process.env.MONGO_URL)
+        await connectDb(process.env.MONGO_URI)
         app.listen(port, () => {
-            console.log(`server is listeaning on port ${port}`)
+            console.log(`server is listening on port ${port}`)
         });
-
-    } catch (error) {
-        console.log(error)
-
-    }
-}
-start()
-
-
-
-
-
-//app.get('/api/v1/tasks')             -Gett all task
-//app.post('/api/v1/tasks')            -Create a new task
-//app.get('/api/v1/tasks/:id')             -Gett single task
-//app.patch('/api/v1/tasks/:id')             -Update task
-//app.delete('/api/v1/tasks/:id')             -delete task
+ 
+    } catch (error)  {
+        console.log( error)
+ 
+    } 
+}  
+start() 
+ 
+ 
+ 
+ 
+ 
+//app.get('/api/v1/t asks')             -Gett all task
+//app.post('/api/v1/ tasks')            -Create a new task
+//app.get('/api/v1/t asks/:id')             -Gett single task
+//app.patch('/api/v1 /tasks/:id')             -Update task
+//app.delete('/api/v 1/tasks/:id')             -delete task
 
 
 // router.route('/').get(getAllTasks).post(createTask)
