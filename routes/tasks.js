@@ -1,5 +1,5 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express')//express intergration
+const router = express.Router()//Router methods  on express to comminicate with the middleware.
 
 const { getAllTasks, createTask, getTask, updateTask, deleteTask } = require('../controller/tasks')
 

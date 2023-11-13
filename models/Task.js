@@ -12,7 +12,10 @@ const TaskSchema = new mongoose.Schema({
     },
     phoneNumber: Number,
     address: String
-})
+})//The schema works as a data definition language which gives instruction as a
+//framework of the database property and every property must have it value. 
+//like "name" and this property has values according to the backend developer wishes
 
-module.exports = mongoose.model('Task',TaskSchema)
+module.exports = mongoose.model('Task',TaskSchema)//Here during exporting of the taskschema we ensure 
+//that we have annexed on it a model keyword
 

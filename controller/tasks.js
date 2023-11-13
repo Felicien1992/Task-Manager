@@ -1,6 +1,7 @@
-const express = require('express')
-const Task = require('../models/Task')
+const express = require('express')//intergration of express
 
+const Task = require('../models/Task') // requiring or importing from model to be ommited onto Task variable declared
+//initial declaration of the HTTP METHODS(Verbs)
 const getAllTasks = async (req, res) => {
     try {
         const tasks = await Task.find({})
@@ -8,7 +9,7 @@ const getAllTasks = async (req, res) => {
     } catch (error) {
         res.status(500).json({ msg: error   })
     }
-};
+};//get all tasks rules
 
 
 const createTask = async (req, res) => {
@@ -18,7 +19,7 @@ const createTask = async (req, res) => {
     } catch (error) {
         res.status(500).json({ msg: error })
     }
-}
+}; 
 
 
 const getTask = async (req, res) => {
