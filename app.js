@@ -1,7 +1,6 @@
 require('./db/connect')
 const express = require('express');
 const app = express()
-// const port = 3000
 const tasks = require('./routes/tasks')
 const connectDb = require('./db/connect')//importing connection
 require('dotenv').config()
@@ -34,7 +33,8 @@ const start = async () => {
  
     } 
 }  
-start() 
+start()
+// 
  
  
  
